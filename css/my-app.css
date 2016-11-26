@@ -1,64 +1,4 @@
-/*login page*/
-.bg {
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/login-run.png');
-  background-size: cover;
-  filter:alpha(opacity=60);
-  opacity:0.6;
-  position: absolute;
-  z-index:-1;
-  -webkit-filter:brightness(0.9);
-  /*-webkit-filter:blur(3px);*/
-}
-.back img{
-  width:20px;
-  height: 20px;
-}
-.login-screen-title{
-  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-  color:white;
-  letter-spacing: 10px;
-}
-.list-block{
-  width:80%;
-  height:20%;
-  display: flex;
-  flex-direction: column;
-  font-family: Microsoft YaHei;
-  color:#fff;
-}
-.item-content{
-  background-color: rgba(255, 255, 255,0.3);
-  border-radius:5px;
-  margin-top: 20px;
-}
-.item-link {
-  border:2px solid white;
-  border-radius:5px;
-  text-align: center;
-  margin-top:20px;
-}
-.list-block-label p{
-  color:rgb(33, 150, 243);
-  font-family: Microsoft YaHei;
-  margin-top: 40px;
-  font-weight: bold;
-}
-
 /* list-begin */
-.icon-head {
-  width:24px;
-  height:24px;
-  background-image:url(../img/head.png);
-  border-radius:3px
-}
-.icon-setting {
-  width: 24px;
-  height: 24px;
-  background-image: url(../img/setting.png);
-  border-radius: 3px
-}
 .icon-help {
   width: 24px;
   height: 24px;
@@ -72,6 +12,15 @@
   border-radius: 3px
 }
 /* list-end */
+
+/* dial-button */
+.icon-dial {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/dial.png)
+  border-radius: 3px
+}
+
 
 /* slider-begin */
 .swiper-custom {
@@ -105,30 +54,12 @@
 }
 /* slider-end */
 
-/*register page*/
-.regi-bgimg{
-  width: 100%;
-  height: 45%;
-  background-image: url('../img/register.png');
-  background-size: cover;
-}
-.item-content{
-  border-bottom: 1px solid #D0D5CF;
-}
-#regi-button{
-  background-color: rgb(33, 150, 243);
-}
-#item-bd-login{
-font-size: 15px;
-font-family: Microsoft YaHei;
-}
-
 /* uploader */
-#uploader-demo .thumbnail {
+#uploader .thumbnail {
     width: 110px;
     height: 110px;
 }
-#uploader-demo .thumbnail img {
+#uploader .thumbnail img {
     width: 100%;
 }
 .uploader-list {

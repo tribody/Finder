@@ -22,6 +22,35 @@
     <script type="text/javascript" src="js/webuploader.js"></script>
   </head>
   <body> 
+    <!-- Panels Overlay -->
+    <div class="panel-overlay"></div>
+
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal">
+      <div class="list-block">
+        <!-- 登录选项 -->
+        <ul>
+          <li>
+            <a href="help.html" class="item-link item-content">
+              <div class="item-media"><i class="icon icon-help"></i></div>
+              <div class="item-inner">
+                <div class="item-title">help</div>
+                <div class="item-after">帮助</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="about.html" class="item-link item-content">
+              <div class="item-media"><i class="icon icon-about"></i></div>
+              <div class="item-inner">
+                <div class="item-title">about</div>
+                <div class="item-after">关于Finder</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- Views -->
     <div class="views">
       <!-- Your main view, should have "view-main" class -->
@@ -29,22 +58,19 @@
         <!-- Top Navbar. In Material theme it should be inside of the page-->
         <div class="navbar">
           <div class="navbar-inner">
-            <div class="left sliding">
-              <a href="about.html" class="link">关于</a>
+            <div id="tip" class="center">
+              <a href="upload.html" class="link">找孩子</a>
             </div>
-            <div id="tip" class="center">找孩子</div>
-            <div class="right sliding">
-              <a href="upload.html" class="link">开始</a>
-            </div>
-            
-            
           </div>
         </div>
         <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-fixed toolbar-fixed">
           <!-- Page, "data-page" contains page name -->
           <div data-page="index" class="page">
-        
+           <!-- Floating Action Button -->
+            <a href="#" class="floating-button color-pink">
+              <i class="icon icon-dial"></i>
+            </a>
             <!-- Scrollable page content -->
             <div class="page-content">
               <div class="swiper-custom">
