@@ -8,94 +8,59 @@
     <!-- Color theme for statusbar -->
     <meta name="theme-color" content="#2196f3">
     <!-- Your app title -->
-    <title>乐动</title>
+    <title>Find Your Kids</title>
     <!-- Path to Framework7 Library CSS, Material Theme -->
     <link rel="stylesheet" href="css/framework7.material.min.css">
     <!-- Path to Framework7 color related styles, Material Theme -->
     <link rel="stylesheet" href="css/framework7.material.colors.min.css">
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
+    <!--引入CSS-->
+    <link rel="stylesheet" type="text/css" href="css/webuploader.css">
+    <!--引入JS-->
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/webuploader.js"></script>
   </head>
-  <body>
-    <!-- Panels Overlay -->
-    <div class="panel-overlay"></div>
-
-    <!-- Left Panel with Reveal effect -->
-    <div class="panel panel-left panel-reveal">
-      <div class="list-block">
-        <!-- 登录选项 -->
-        <ul>
-          <li>
-            <a href="#" class="item-link item-content">
-              <div class="item-media"><i class="icon icon-head"></i></div>
-              <div class="item-inner">
-                <div class="item-title">personal information</div>
-                <!-- 显示账户名 -->
-                <div class="item-after"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item-link item-content">
-              <div class="item-media"><i class="icon icon-setting"></i></div>
-              <div class="item-inner">
-                <div class="item-title">settings</div>
-                <div class="item-after">设置</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item-link item-content">
-              <div class="item-media"><i class="icon icon-help"></i></div>
-              <div class="item-inner">
-                <div class="item-title">help</div>
-                <div class="item-after">帮助</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="item-link item-content">
-              <div class="item-media"><i class="icon icon-about"></i></div>
-              <div class="item-inner">
-                <div class="item-title">about</div>
-                <div class="item-after">关于乐动</div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+  <body> 
     <!-- Views -->
     <div class="views">
       <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
+        <!-- Top Navbar. In Material theme it should be inside of the page-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left sliding">
+              <a href="about.html" class="link">关于</a>
+            </div>
+            <div id="tip" class="center">找孩子</div>
+            <div class="right sliding">
+              <a href="upload.html" class="link">开始</a>
+            </div>
+            
+            
+          </div>
+        </div>
         <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-fixed toolbar-fixed">
           <!-- Page, "data-page" contains page name -->
           <div data-page="index" class="page">
-
-            <!-- Top Navbar. In Material theme it should be inside of the page-->
-            <div class="navbar">
-              <div class="navbar-inner">
-                  <div class="center">乐动</div>
-              </div>
-            </div>
-            <div class="toolbar">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="login-screen-page.html" class="link">登录</a>
-                <a href="register-screen-page.html" class="link">注册</a>
-              </div>
-            </div>
+        
             <!-- Scrollable page content -->
             <div class="page-content">
               <div class="swiper-custom">
                 <div class="swiper-container">
                   <div class="swiper-pagination"></div>
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide"><span>精准化的轨迹记录</span></div>
-                    <div class="swiper-slide"><span>可视化的数据分析</span></div>
-                    <div class="swiper-slide"><span>人性化的语音助手</span></div>
+                    <div class="swiper-slide"><span>上传孩子图片</span>
+                      <img data-src="img/find1.png" class="swiper-lazy">
+                      <div class="preloader"></div>
+                    </div>
+                    <div class="swiper-slide"><span>等待匹配结果</span>
+                      <img data-src="img/find2.png" class="swiper-lazy">
+                      <div class="preloader"></div></div>
+                    <div class="swiper-slide"><span>返回匹配信息</span>
+                      <img data-src="img/find3.png" class="swiper-lazy">
+                      <div class="preloader"></div></div>
                   </div>
                 </div>
                 <div class="swiper-button-prev"></div>
