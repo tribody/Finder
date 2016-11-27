@@ -50,8 +50,8 @@ $$(document).on('pageInit', '.page[data-page="upload"]', function (e) {
         ratio = window.devicePixelRatio || 1,
 
         // 缩略图大小
-        thumbnailWidth = 100 * ratio,
-        thumbnailHeight = 100 * ratio,
+        thumbnailWidth = 100 *ratio
+        thumbnailHeight = 100 *ratio,
 
         // Web Uploader实例
         uploader;
@@ -68,7 +68,7 @@ $$(document).on('pageInit', '.page[data-page="upload"]', function (e) {
         swf: BASE_URL + '/js/Uploader.swf',
 
         // 文件接收服务端。
-        server: 'http://10.106.89.244/Finder/fileupload.php',
+        server: 'http://localhost/Finder/fileupload.php',
 
         // 选择文件的按钮。可选。
         // 内部根据当前运行是创建，可能是input元素，也可能是flash.
@@ -84,9 +84,12 @@ $$(document).on('pageInit', '.page[data-page="upload"]', function (e) {
     // 当有文件添加进来的时候
     uploader.on( 'fileQueued', function( file ) {
         var $li = $(
-                '<div id="' + file.id + '" class="file-item thumbnail">' +
-                    '<img>' +
-                    '<div class="info">' + file.name + '</div>' +
+                '<div class="card">' +
+                  '<div class="card-header info">' + file.name + '</div>' +
+                  '<div class="card-content">' +
+                    '<div id="' + file.id +'" class="card-content-inner thumbnail"><img></div>' +
+                  '</div>' +
+                  '<div class="card-footer"></div>' +
                 '</div>'
                 ),
             $img = $li.find('img');
@@ -112,7 +115,7 @@ $$(document).on('pageInit', '.page[data-page="upload"]', function (e) {
         // 避免重复创建
         if ( !$percent.length ) {
             $percent = $('<p class="progress"><span></span></p>')
-                    .appendTo( $li )
+                    .appendTo( $li.find('.card-footer') )
                     .find('span');
         }
 
@@ -131,7 +134,7 @@ $$(document).on('pageInit', '.page[data-page="upload"]', function (e) {
 
         // 避免重复创建
         if ( !$error.length ) {
-            $error = $('<div class="error"></div>').appendTo( $li );
+            $error = $('<div class="error"></div>').appendTo( $li.find('.card-footer') );
         }
 
         $error.text('上传失败');
