@@ -26,15 +26,17 @@ mySwiper.on('onReachEnd',function() {
     });
 });
 
-$$('#find').on('click', function(){
-
-})
 
 // Add view
 var mainView = myApp.addView('.view-main', {
   // Because we want to use dynamic navbar, we need to enable it for this view:
   dynamicNavbar: true
 });
+
+// dial
+// $$('.floating-button').on('click', function() {
+    
+// })
 
 $$(document).on('pageInit', '.page[data-page="upload"]', function (e) {
   // Following code will be executed for page with data-page attribute equal to "about"
